@@ -6,4 +6,4 @@ COPY . /opt/app
 
 RUN yarn install
 
-CMD ['node', 'index.js']
+CMD ["node", "index.js"]
