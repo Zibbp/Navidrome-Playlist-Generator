@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  navidrome-playlist-generator:
+    container_name: navidrome-playlist-generator
+    image: ghcr.io/zibbp/navidrome-playlist-generator:master
+    volumes:
+      - /path/to/navidrome/data:/navidrome:ro
+      - /path/to/csvs:/csvs:ro
+      - /path/to/music:/music
