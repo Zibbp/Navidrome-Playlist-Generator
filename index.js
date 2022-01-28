@@ -11,7 +11,7 @@ let csvPlaylists = {};
 
 async function findTrack(title, artist) {
   try {
-    let sql = `SELECT * FROM media_file WHERE title = "${title}" AND artist = "${artist}" LIMIT 1`;
+    let sql = `SELECT * FROM media_file WHERE title = "${title}" AND artist LIKE "${artist}%" LIMIT 1`;
     const result = await db.get(sql);
     return result;
   } catch (error) {
